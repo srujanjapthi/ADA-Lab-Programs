@@ -52,6 +52,14 @@ void generateBestCaseData(int n, int graph[n][n]) {
     graph[0][n - 1] = graph[n - 1][0] = 1;
 }
 
+void generateAverageCaseData(int n, int graph[n][n]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            graph[i][j] = rand() % 2;
+        }
+    }
+}
+
 void generateWorstCaseData(int n, int graph[n][n]) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -62,10 +70,13 @@ void generateWorstCaseData(int n, int graph[n][n]) {
 
 void plotter() {
     FILE *fpBest = fopen("warshall_best.txt", "w");
+    FILE *fpAvg = fopen("warshall_avg.txt", "w");
     FILE *fpWorst = fopen("warshall_worst.txt", "w");
     FILE *testCaseBest = fopen("warshalls_test_case_best.txt", "w");
+    FILE *testCaseAvg = fopen("warshalls_test_case_avg.txt", "w");
     FILE *testCaseWorst = fopen("warshalls_test_case_worst.txt", "w");
     FILE *resultBest = fopen("warshalls_result_best.txt", "w");
+    FILE *resultAvg = fopen("warshalls_result_avg.txt", "w");
     FILE *resultWorst = fopen("warshalls_result_worst.txt", "w");
 
     for (int n = 2; n <= 12; n++) {
@@ -76,15 +87,20 @@ void plotter() {
         fprintf(fpBest, "%d\t%d\n", n, warshallsTransitiveClosure(n, graph, tClosure));
         printToFile(n, tClosure, resultBest);
 
+        generateAverageCaseData(n, graph);
+        printToFile(n, graph, testCaseAvg);
+        fprintf(fpAvg, "%d\t%d\n", n, warshallsTransitiveClosure(n, graph, tClosure));
+        printToFile(n, tClosure, resultAvg);
+
         generateWorstCaseData(n, graph);
         printToFile(n, graph, testCaseWorst);
         fprintf(fpWorst, "%d\t%d\n", n, warshallsTransitiveClosure(n, graph, tClosure));
         printToFile(n, tClosure, resultWorst);
     }
 
-    fclose(fpBest), fclose(fpWorst);
-    fclose(testCaseBest), fclose(testCaseWorst);
-    fclose(resultBest), fclose(resultWorst);
+    fclose(fpBest), fclose(fpAvg), fclose(fpWorst);
+    fclose(testCaseBest), fclose(testCaseAvg), fclose(testCaseWorst);
+    fclose(resultBest), fclose(resultAvg), fclose(resultWorst);
 }
 
 void main() {
