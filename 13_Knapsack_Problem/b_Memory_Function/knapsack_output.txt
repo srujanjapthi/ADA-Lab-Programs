@@ -1,0 +1,110 @@
+Enter the number of Items: 3
+Enter the knapsack capacity: 5
+
+Enter weight and value of each item:
+Item 1: 1 10
+Item 2: 3 15
+Item 3: 4 20
+
+Knapsack Table:
+0   0   0   0   0   0   
+0   10  10  NA  NA  10  
+0   10  NA  NA  NA  25  
+0   NA  NA  NA  NA  30  
+
+Maximum profit: 30
+Composition: 3 1 
+------------------------------------------------------------
+
+Enter the number of Items: 4
+Enter the knapsack capacity: 6
+
+Enter weight and value of each item:
+Item 1: 2 12
+Item 2: 3 18
+Item 3: 1 10
+Item 4: 4 25
+
+Knapsack Table:
+0   0   0   0   0   0   0   
+0   0   12  12  NA  12  12  
+0   0   12  NA  NA  30  30  
+0   NA  12  NA  NA  NA  40  
+0   NA  NA  NA  NA  NA  40  
+
+Maximum profit: 40
+Composition: 3 2 1 
+------------------------------------------------------------
+
+Enter the number of Items: 5
+Enter the knapsack capacity: 7
+
+Enter weight and value of each item:
+Item 1: 2 15
+Item 2: 3 20
+Item 3: 1 8
+Item 4: 4 28
+Item 5: 2 14
+
+Knapsack Table:
+0   0   0   0   0   0   0   0   
+0   0   15  15  15  15  15  15  
+0   0   15  20  20  35  35  35  
+0   8   NA  23  NA  35  NA  43  
+0   NA  NA  NA  NA  36  NA  51  
+0   NA  NA  NA  NA  NA  NA  51  
+
+Maximum profit: 51
+Composition: 4 3 1 
+------------------------------------------------------------
+
+Enter the number of Items: 6
+Enter the knapsack capacity: 8
+
+Enter weight and value of each item:
+Item 1: 1 5
+Item 2: 2 14
+Item 3: 3 18
+Item 4: 4 22
+Item 5: 2 11
+Item 6: 3 24
+
+Knapsack Table:
+0   0   0   0   0   0   0   0   0   
+0   5   5   5   5   5   5   NA  5   
+0   5   14  19  19  19  19  NA  19  
+0   5   14  19  23  32  37  NA  37  
+0   NA  NA  19  NA  32  37  NA  45  
+0   NA  NA  NA  NA  32  NA  NA  48  
+0   NA  NA  NA  NA  NA  NA  NA  56  
+
+Maximum profit: 56
+Composition: 6 3 2 
+------------------------------------------------------------
+
+Enter the number of Items: 7
+Enter the knapsack capacity: 9
+
+Enter weight and value of each item:
+Item 1: 2 16
+Item 2: 3 22
+Item 3: 1 9
+Item 4: 4 25
+Item 5: 2 13
+Item 6: 3 20
+Item 7: 1 7
+
+Knapsack Table:
+0   0   0   0   0   0   0   0   0   0   
+0   0   16  16  16  16  16  16  16  16  
+0   0   16  22  22  38  38  38  38  38  
+0   9   16  25  31  38  47  47  47  47  
+0   NA  NA  25  31  38  47  50  56  63  
+0   NA  NA  NA  NA  38  47  NA  60  63  
+0   NA  NA  NA  NA  NA  NA  NA  60  67  
+0   NA  NA  NA  NA  NA  NA  NA  NA  67  
+
+Maximum profit: 67
+Composition: 6 3 2 1 
+------------------------------------------------------------
+

@@ -1,0 +1,18 @@
+set title 'Title Here'
+set xrange [xStart:xEnd]
+set yrange [yStart:yEnd]
+set xlabel 'Input Size (n)'
+set ylabel 'Operation Count'
+set style data linespoints
+plot 'File1.txt' title 'Title for case 1', 'File2.txt' title 'Title for case 2'
+
+----------------------------------------------------------------------------------------------------------------
+
+Example:
+set title 'Bubble Sort'
+set xrange [10:100]
+set yrange [0:5000]
+set xlabel 'Input Size (n)'
+set ylabel 'Operation Count'
+set style data linespoints
+plot 'best_case.txt' title 'Best Case', 'worst_case.txt' title 'Worst Case', 'avg_case.txt' title 'Average Case'
